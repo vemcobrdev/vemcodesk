@@ -1,0 +1,128 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Fira Mono';
+        text-decoration: none;
+    }
+    
+    header {
+        min-height: 6vh;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        background-color: #ffffff;
+        box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.25);
+    }
+    
+    header #titulo {
+        float: left;
+        margin-left: 10px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(26, 2, 114);
+    }
+    
+    header #logout {
+        text-align: right;
+        margin-right: 10px;
+        color: rgb(0, 0, 0)
+    }
+    
+    main {
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(#e7e6e6, #e9e8e8);
+        display: flex;
+        justify-content: center;
+        box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.25);
+    }
+    
+    main form {
+        margin: 20px;
+        width: 100%;
+        height: 50%;
+        background-color: #a3a4ff8c;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4) inset 0px0px 3px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main form .inputs-container {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main form #field-title,
+    #field-status,
+    #field-analyst {
+        width: 100%;
+        height: 30px;
+        padding: 0px 15px;
+        border: 0px;
+        outline: 0px;
+        border-radius: 5px;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+        margin-bottom: 10px;
+    }
+    
+    main form #field-description {
+        width: 100%;
+        height: 100px;
+        padding: 0px 15px;
+        border: 0px;
+        outline: 0px;
+        border-radius: 5px;
+        font-size: 16px;
+        color: black;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    }
+    
+    main form section .button {
+        background-color: #090981;
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+        width: 110%;
+        height: 20%;
+        margin-top: 20px;
+        border: 0;
+        outline: 0;
+        font-size: 1em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    }
+    
+    main form button:hover {
+        background: #09098186;
+        color: rgb(255, 255, 255);
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    }
+    
+    main form #tableTicket {
+        margin-top: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        width: 100%;
+        border-collapse: collapse;
+        display: flex;
+    }
+    
+    main form #tableTicket td,
+    tr {
+        border: 1px solid #b1b2f8;
+        border-collapse: collapse;
+        padding: 7px;
+    }
+    
+    main form #tableTitle {
+        color: rgb(255, 255, 255);
+        background-color: rgb(26, 2, 114);
+    }

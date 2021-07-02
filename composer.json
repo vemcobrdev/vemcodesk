@@ -1,0 +1,6 @@
+{
+    "require": {
+        "mashape/unirest-php": "^3.0",
+        "curl/curl": "^2.3"
+    }
+}
