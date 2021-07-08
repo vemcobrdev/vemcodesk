@@ -66,6 +66,8 @@ function allCall() {
             break;
         case "2":
             foreach($result as $var){
+                $datan = new DateTime($var->dateLastActivity);
+                $datam = $datan->format('d-m-y H:i:s');
                 switch ($var->idList){
                     case "5df11b05a848d0742d9f3991":
                             $lista="Atuando";
@@ -88,7 +90,7 @@ function allCall() {
                 <td>{$var->idList}</td>
                 <td>Douglas William</td>
                 <td>Cliente</td>
-                <td>{$var->dateLastActivity}</td>
+                <td>{$datam}</td>
                 <td><a href='./editor.php?ticket=$var->id'>Editar</a>
                 <a href='./delete.php?ticket=$var->id' onclick=\"return confirm('Deseja excluir esse ticket? Não há como reverter essa ação!'); return false;\">Apagar</a></td>
             </tr>

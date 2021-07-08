@@ -117,29 +117,42 @@
         $result = json_decode($result);
         curl_close($ch);
         foreach($result as $var){
+            $datan = new DateTime($var->dateLastActivity);
+            $datam = $datan->format('y-m-d H:i:s');
             switch ($var->idList){
                 case "5df11b05a848d0742d9f3991":
-                        $lista="Atuando";
+                    $lista="Novo";
                         break;
-                    case "5df11b05a848d0742d9f3992":
-                        $lista="Em progresso";
-                        break;
-                    case "5df11b05a848d0742d9f3993":
-                        $lista="Em espera";
-                        break;
-                    case "5df11b05a848d0742d9f3994":
-                        $lista="Pendente cliente";
-                        break;
-                    case "5df11b05a848d0742d9f3995":
-                        $lista="Concluído";
-                        break;
-                    };
+                case "5df11b05a848d0742d9f3992":
+                    $lista="Em progresso";
+                    break;
+                case "5df11b05a848d0742d9f3993":
+                    $lista="Em espera";
+                    break;
+                case "5df11b05a848d0742d9f3994":
+                    $lista="Pendente cliente";
+                    break;
+                case "5df11b05a848d0742d9f3995":
+                    $lista="Concluído";
+                    break;
+            };
+            switch ($var->idMembers[0]){
+                case "5b153a426aaae06a1fe099d1":
+                    $membro="Douglas William";
+                    break;
+                case "5e0e15a9c2f41864280c7211":
+                    $membro="Breno de Oliveira Moura";
+                    break;
+                case "":
+                    $membro="Sem reponsável";
+                    break;
+            };
             print_r ("<tr>
                 <td><a href='./anotacao.php?ticket=$var->id'>{$var->name}</a></td>
                 <td>{$lista}</td>
-                <td>Douglas William</td>
+                <td>{$membro}</td>
                 <td>Cliente</td>
-                <td>{$var->dateLastActivity}</td>
+                <td>{$datam}</td>
                 <td><a href='./editor.php?ticket=$var->id'>Editar</a>
                 <a href='./delete.php?ticket=$var->id' onclick=\"return confirm('Deseja excluir esse ticket? Não há como reverter essa ação!'); return false;\">Apagar</a></td>
             </tr>
@@ -163,7 +176,7 @@
                     <th style='width: 100px'>Ações</th>
                 </tr>
                 <!-- request dos tickets -->
-                <?php ticketsCall() ?>
+                <?php ticketsCall()?>
                 <!-- fim do request -->
             </table>
         </form>

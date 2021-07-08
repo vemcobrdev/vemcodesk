@@ -61,11 +61,13 @@
         curl_close($ch);
 
         foreach($result as $var){
+            $datan = new DateTime($var->date);
+            $datam = $datan->format('d-m-y H:i:s');
             if(isset($var->data->text)){
                 print_r ("<tr>
                     <td>{$var->memberCreator->fullName}</td>
                     <td>{$var->data->text}</td>
-                    <td>{$var->date}</td>
+                    <td>{$datam}</td>
                     </tr>");
             }
         }
