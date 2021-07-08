@@ -32,7 +32,7 @@
     <main>
     <!--                Inicio das Funções                -->
         <?php
-
+        function cardHistory(){
         /*Var de autenticação*/
         include './keys/apiData.php';
 
@@ -69,7 +69,7 @@
                     </tr>");
             }
         }
-
+    }
         function post($array) {
         
             /*Var de autenticação*/
@@ -98,6 +98,7 @@
         ?>
         <!--                Fim das Funções                -->
         <form action="" method="POST">
+        <span style="background-color: #b1b2f8; color: black; font-size: 1em; font-weight: 600;">Editar Ticket</span>
             <section class="inputs-container">
                 <p>Título<input type="text" name="field-title" value="" id="field-title"></p>
                 <p>Responsável<input type="text" name="field-analyst" value="" id="field-analyst"></p>

@@ -6,3 +6,6 @@
     - Proteção de dados sensiveis de autenticação na API em arquivo externo apiData.php
     - Centralização do código no arquivo apiCall.php
     - Proteção dos dados de autenticação de API e adequação no outros arquivos, movendo apiData.php para pasta "keys" a qual não esta sendo sincronizada
+
+05/07/2021
+    - Adição de troca do id do Analista pelo nome na página de tickets

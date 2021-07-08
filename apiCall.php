@@ -66,16 +66,33 @@ function allCall() {
             break;
         case "2":
             foreach($result as $var){
-                print_r ("<tr>
-                    <td><a href='./anotacao.php?ticket=$var->id'>{$var->name}</a></td>
-                    <td>{$var->idList}</td>
-                    <td>Douglas William</td>
-                    <td>Cliente</td>
-                    <td>{$var->dateLastActivity}</td>
-                    <td><a href='./editor.php?ticket=$var->id'>Editar</a>
-                    <a href='./delete.php?ticket=$var->id' onclick=\"return confirm('Deseja excluir esse ticket? Não há como reverter essa ação!'); return false;\">Apagar</a></td>
-                </tr>
-                ");
+                switch ($var->idList){
+                    case "5df11b05a848d0742d9f3991":
+                            $lista="Atuando";
+                            break;
+                        case "5df11b05a848d0742d9f3992":
+                            $lista="Em progresso";
+                            break;
+                        case "5df11b05a848d0742d9f3993":
+                            $lista="Em espera";
+                            break;
+                        case "5df11b05a848d0742d9f3994":
+                            $lista="Pendente cliente";
+                            break;
+                        case "5df11b05a848d0742d9f3995":
+                            $lista="Concluído";
+                            break;
+                        }
+            print_r ("<tr>
+                <td><a href='./anotacao.php?ticket=$var->id'>{$var->name}</a></td>
+                <td>{$var->idList}</td>
+                <td>Douglas William</td>
+                <td>Cliente</td>
+                <td>{$var->dateLastActivity}</td>
+                <td><a href='./editor.php?ticket=$var->id'>Editar</a>
+                <a href='./delete.php?ticket=$var->id' onclick=\"return confirm('Deseja excluir esse ticket? Não há como reverter essa ação!'); return false;\">Apagar</a></td>
+            </tr>
+            ");
             };
             break;
         case "4":

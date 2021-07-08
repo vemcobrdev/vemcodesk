@@ -117,9 +117,26 @@
         $result = json_decode($result);
         curl_close($ch);
         foreach($result as $var){
+            switch ($var->idList){
+                case "5df11b05a848d0742d9f3991":
+                        $lista="Atuando";
+                        break;
+                    case "5df11b05a848d0742d9f3992":
+                        $lista="Em progresso";
+                        break;
+                    case "5df11b05a848d0742d9f3993":
+                        $lista="Em espera";
+                        break;
+                    case "5df11b05a848d0742d9f3994":
+                        $lista="Pendente cliente";
+                        break;
+                    case "5df11b05a848d0742d9f3995":
+                        $lista="Concluído";
+                        break;
+                    };
             print_r ("<tr>
                 <td><a href='./anotacao.php?ticket=$var->id'>{$var->name}</a></td>
-                <td>{$var->idList}</td>
+                <td>{$lista}</td>
                 <td>Douglas William</td>
                 <td>Cliente</td>
                 <td>{$var->dateLastActivity}</td>
@@ -129,7 +146,7 @@
             ");
         };
     }
-    ?>
+    ?><span></span>
     <!-- Final das funções-->
         <form>
             <section class="btn-new">
@@ -139,10 +156,10 @@
             <table id="tableTicket">
                 <tr id="tableTitle">
                     <th style='cursor: pointer; width: 1500px' onclick="sortTable(0)">Chamado</th>
-                    <th>Estado</th>
-                    <th style='width: 160px'>Analista</th>                    
+                    <th style='width: 200px'>Estado</th>
+                    <th style='width: 200px'>Analista</th>                    
                     <th style='width: 160px'>Cliente</th>
-                    <th style='cursor: pointer; width: 100px' onclick="sortTable(1)">Última atividade</th>
+                    <th style='cursor: pointer; width: 100px' onclick="sortTable(4)">Última atividade</th>
                     <th style='width: 100px'>Ações</th>
                 </tr>
                 <!-- request dos tickets -->

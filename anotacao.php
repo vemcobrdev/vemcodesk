@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tickets</title>
+    <title>Anotações</title>
     <link rel="stylesheet" href="./css/note.css?v=<?php echo time(); ?>">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
@@ -34,8 +34,8 @@
         <?php
         /*Var de autenticação*/
         function cardHistory(){
-        $api_key="6cb2449ef416f281ef017d966323e4c1";
-        $token="e2dea2395dbbc2735c157a3567e8342e6566cb3f19986b35dff90f6b87c102fe";
+
+        include './keys/apiData.php';
         /*dados do cartão*/
         $url="https://api.trello.com/1/";
         $dataType="cards/";
@@ -66,6 +66,7 @@
                     <td>{$var->memberCreator->fullName}</td>
                     <td>{$var->data->text}</td>
                     <td>{$var->date}</td>
+                    <td><a href='#' onclick=\"return confirm('Deseja excluir essa anotação? Não há como reverter essa ação!'); return false;\">Apagar</a></td>
                     </tr>");
                 }
             }
@@ -95,7 +96,9 @@
             }
         ?>
         <!--                Fim das Funções                -->
+        
         <form action="" method="POST">
+        <span style="background-color: #b1b2f8; color: black; font-size: 1em; font-weight: 600;">Adicionar Anotação</span>
             <section class="inputs-container">
                 <p>Título<input type="text" name="field-title" value="" id="field-title"></p>
                 Estado<select name="field-status" value="" id="field-status">
@@ -118,6 +121,7 @@
                         <td style='width: 160px'>Agente</td>
                         <td>Atividade</td>
                         <td style='width: 100px'>Data</td>
+                        <td>Ações</td>
                     </tr>
                 <!-- request dos tickets -->
                 <?php cardHistory();
