@@ -1,5 +1,5 @@
 01/07/2021
-    - Adição de mensagem para exclusão de registros na página de tickets
+    - Adição de mensagem antes da exclusão de registros na página de tickets
 
 02/07/2021
     - Testando Switch Case e uso de php externo no código
@@ -9,3 +9,11 @@
 
 05/07/2021
     - Adição de troca do id do Analista pelo nome na página de tickets
+
+08/07/2021
+    - Adição de recurso para detecção do id dos membros responsáveis pelo tickets
+    - Formatação da data de forma mais adequada
+
+13/07/2021
+    - Adicionado ícone do Vemcount em todas as páginas
+    - Adicionado arquivo roadmap com atividades a serem executadas

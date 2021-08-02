@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickets</title>
+    <link rel="shortcut icon" href="./ico/favicon.ico" />
     <link rel="stylesheet" href="./css/tickets.css?v=<?php echo time(); ?>">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
@@ -138,20 +139,35 @@
             };
             switch ($var->idMembers[0]){
                 case "5b153a426aaae06a1fe099d1":
-                    $membro="Douglas William";
+                    $membro0="Douglas William";
                     break;
                 case "5e0e15a9c2f41864280c7211":
-                    $membro="Breno de Oliveira Moura";
+                    $membro0="Breno de Oliveira Moura";
                     break;
                 case "":
-                    $membro="Sem reponsável";
+                    $membro0="Sem reponsável";
                     break;
             };
+            switch ($var->idMembers[1]){
+                case "5b153a426aaae06a1fe099d1":
+                    $membro1="Douglas William";
+                    break;
+                case "5e0e15a9c2f41864280c7211":
+                    $membro1="Breno de Oliveira Moura";
+                    break;
+                case "5df7b7d43fe2b47e6dd445dc":
+                    $membro1="Priscila Rodrigues";
+                    break;
+                case "":
+                    $membro1="";
+                    break;
+            };
+#
             print_r ("<tr>
                 <td><a href='./anotacao.php?ticket=$var->id'>{$var->name}</a></td>
                 <td>{$lista}</td>
-                <td>{$membro}</td>
-                <td>Cliente</td>
+                <td>{$membro0}</td>
+                <td>{$membro1}</td>
                 <td>{$datam}</td>
                 <td><a href='./editor.php?ticket=$var->id'>Editar</a>
                 <a href='./delete.php?ticket=$var->id' onclick=\"return confirm('Deseja excluir esse ticket? Não há como reverter essa ação!'); return false;\">Apagar</a></td>

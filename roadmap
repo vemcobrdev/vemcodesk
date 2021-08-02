@@ -1,0 +1,25 @@
+E-mail
+
+Criar mecanismo de envio de e-mails por phpmailer
+    Adicionar envio de e-mail a cada anotação, alterações e criação de tickets
+
+Login
+
+Adicionar login utilizando firebase
+    Gerar token e armazenar após autenticação
+
+Tickets
+
+Adicionar verificador de token de autenticação, caso inválido redirecionar a tela de login
+Corrigir recurso onde o botão "Novo chamado" abre a página "editor" com as informações vazias para input e salvar os dados
+Adicionar opção de filtro por estado
+
+Anotações
+
+Corrigir ou ocultar mensagem "invalid value for text" ao entrar na página
+Estilizar botão "Submit"
+Ocultar retorno JSON após adicionar anotação
+Atualizar página automaticamente após adicionar anotação
+Título deve exibir a informação de título atual
+Adicionar código para funcionalidade do botão "Apagar"
+Ao alterar estado deve alterar a coluna no ticket também

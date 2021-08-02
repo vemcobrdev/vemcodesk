@@ -12,7 +12,7 @@ $dataId="5f43bc41232f201307c6adf7"; /*$dataId=$_GET['ticket']*/
 4 - Postar ação em ticket
 */
 
-$id="4";
+$id="2";
 switch ($id){
     case "1":
         $requestURL = $url.'cards/'.$dataId.'/?key='.$api_key.'&token='.$token;
@@ -32,7 +32,6 @@ switch ($id){
         break;
 }
 
-print_r($requestURL);
 
 function allCall() {
 
@@ -65,6 +64,7 @@ function allCall() {
             exit();
             break;
         case "2":
+            print_r ($id);
             foreach($result as $var){
                 $datan = new DateTime($var->dateLastActivity);
                 $datam = $datan->format('d-m-y H:i:s');
